@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "help-desk-rag"
+version = "0.1.0"
+description = "Aplicación de helpdesk con Streamlit, LangGraph y RAG"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "chromadb",
+    "langchain-classic",
+    "langchain-community",
+    "langchain-openai",
+    "langchain-text-splitters",
+    "langgraph",
+    "langgraph-checkpoint-sqlite",
+    "streamlit",
+]
+
+[tool.setuptools]
+py-modules = [
+    "app",
+    "config",
+    "graph",
+    "prompts",
+    "rag_system",
+    "setup_rag",
+]
